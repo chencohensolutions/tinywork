@@ -4,14 +4,15 @@
     position: relative;
     .ui-sprite {
         position: absolute;
+        height: 0;
+        width: 0;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
         z-index: 0;
         &.background {
             width: 100%;
             img {
-                width: 100%;                
+                width: 100%;
             }
         }
         &.highlight {
@@ -20,15 +21,8 @@
             }
         }
         img {
-            // &:hover {
-            //     outline: 1pt solid green;
-                
-            // }
-            position: relative;
-            z-index: 10;
             display: inline-block;
             vertical-align: bottom;
         }
     }
-
 }

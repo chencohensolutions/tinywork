@@ -18,13 +18,13 @@ class Sprite extends React.Component {
             this.setState({
                 highlight: false
             })
-        },1000)
+        }, 1000)
     }
-    
+
     render() {
 
         var style = {
-            transform: 'matrix(' + this.props.transform.join(',') + ')'
+            transform: 'translate(-50%, -50%) matrix(' + this.props.transform.join(',') + ')'
         }
 
         return <div className={classList('ui-sprite', {
@@ -32,12 +32,12 @@ class Sprite extends React.Component {
             'sprite': this.props.type === 'img',
             'highlight': this.state.highlight
         })}>
+
             <img
+                style={style}
                 ref={(domImg) => { this.domImg = domImg }}
                 src={this.props.filename}
-                style={style}
-                onClick={this.onTap}
-            />
+                onClick={this.onTap} />
         </div>
     }
 }
