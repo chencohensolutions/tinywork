@@ -22,17 +22,14 @@ class Sprite extends React.Component {
     }
 
     render() {
-
         var style = {
             transform: 'translate(-50%, -50%) matrix(' + this.props.transform.join(',') + ')'
         }
-
         return <div className={classList('ui-sprite', {
             'background': this.props.type === 'bg',
             'sprite': this.props.type === 'img',
             'highlight': this.state.highlight
         })}>
-
             <img
                 style={style}
                 ref={(domImg) => { this.domImg = domImg }}
